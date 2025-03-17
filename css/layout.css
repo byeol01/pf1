@@ -1,0 +1,500 @@
+body{
+}
+
+header{
+  position: absolute;
+  width: 100%;
+}
+
+header nav{
+  width: 1440px;
+  margin: 0 auto;
+  height: 70px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+header h1{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+header ul.gnb{
+  display: flex;
+  gap: 20px;
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+}
+header ul.gnb>li{
+  
+}
+
+header ul.gnb li:hover ul.svg{
+  
+}
+
+header ul.gnb li ul.svg{
+  position: absolute;
+  background-color: white;
+  padding: 15px;
+}
+
+header ul.gnb>li>a{
+  
+}
+
+header ul.gnb>li>a:hover{
+  color: white;
+}
+
+header ul.gnb li ul.sub{
+  background-color: white;
+  padding: 12px;
+  position: absolute;
+  display: none;
+}
+
+header ul.gnb li:hover ul.sub{
+  display: block;
+}
+
+header ul.gnb li ul.sub li{
+  
+}
+header ul.gnb li ul.sub li a{
+  
+}
+
+header ul.enb{ 
+  display: flex; 
+  grid-column: 1 / span2;
+  grid-row: 1;
+  background-color: #334242;
+  color: white;
+  font-size: 12px;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: calc((1903px - 1440px) / -2);
+  margin-left: calc((1903px - 1440px) / -2);
+  padding-right: calc((1903px - 1440px) / 2);
+  padding-left:  calc((1903px - 1440px) / 2);
+  height: 100%;
+  align-items: center;  
+}
+
+headerul.gnb li{ 
+}
+
+header ul.enb li a {
+  color: #fff;
+}
+
+body>div{
+  height: calc(100%);
+  display: flex; /* 정렬할 요소의 부모에게 지정,기본으로 수평정렬이 됨 */
+  justify-content: center; /* 좌우정렬:중앙 */
+  align-items: center; /* 수직정렬:중앙 */
+  background-image: url(../img/title1.png),linear-gradient(to top, #55ebaa 0%, #e0d0d0 100%);
+  background-repeat: no-repeat;
+  background-position: bottom,center;
+  background-size: 20% ,100%;
+  background-image: url(../img/title1.png),url(https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+body>div h2{
+  color: white;
+  font-size: 36px;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 1; 
+}
+
+body > div > a{  
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  font-size: 0;
+  width: 40px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.6);
+  border: 3px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
+  animation-name: scroll;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 1px;
+}
+
+body >div a::before{
+  content: ""; 
+  width: 30%;
+  height: 30%;
+  display: block;
+  background-image: url(../img/svg/arrow-right-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+  background-position: center;
+}
+
+body >div a::after{
+  content: "● ●";  
+  font-size: 3px;
+  color: white;
+  transform: translateX(-0.29px) rotate(90deg);
+  transform-origin: 50% 50%;
+  line-height: 1;
+  animation-name: colorC;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorC{
+  0%{
+    color: #fff;
+  }
+  100%{
+    color: yellow;
+  }
+}
+
+@keyframes scroll{
+  0%{
+    bottom: 30px;     
+  }
+  100%{
+    bottom: 50px;
+  }
+}
+
+h2{
+  color: black;
+  font-size: 52px;
+}
+
+main{  
+}
+
+section{
+  min-height: 700px;  
+  /*! height: 100vh; */
+}
+
+/* faq */
+main section#faq{
+  background-image: url(https://images.unsplash.com/photo-1736082063156-c268c92717cf?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+main section#faq div{
+  height: 100%;
+}
+
+main section#faq div h2{ 
+}
+
+main section#faq div p{
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+main section#faq div ul{    
+  display: flex;
+  gap: 20px;
+}
+
+main section#faq div ul li{ 
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+main section#faq div ul li h3{
+  
+}
+
+main section#faq div ul li:hover h3{
+  color: #31c7c5;
+}
+
+main section#faq div ul li:hover{
+  border: 2px solid #31c7c5;
+  box-sizing: border-box;
+}
+
+main section#faq div ul li::before{
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#faq div ul li:nth-child(1)::before{
+  content: "1";
+}
+main section#faq div ul li:nth-child(2)::before{
+  content: "2";
+}
+main section#faq div ul li:nth-child(3)::before{
+  content: "3";
+}
+main section#faq div ul li:nth-child(4)::before{
+  content: "4";
+}
+main section#faq div a{  
+}
+
+main section#faq div a:hover{
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+main section#faq div a::after{
+  /*! content: ""; */
+}
+
+/* Portfolio */
+section#Portfolio{
+  background-color: #363b3e;
+}
+
+main section#Portfolio div{
+  padding: 50px 0; 
+  height: 100%;
+}
+
+main section#Portfolio div h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section#Portfolio div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+main section#Portfolio div ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#Portfolio div ul li{
+  width: 25%;
+  height: 214px;  
+}
+
+section#Portfolio div ul li:nth-child(1) {
+  background-image: url(../img/po1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(2) {
+  background-image: url(../img/po2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(3) {
+  background-image: url(../img/po3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(4) {
+  background-image: url(../img/po4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(5) {
+  background-image: url(../img/po5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(6) {
+  background-image: url(../img/po6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(7) {
+  background-image: url(../img/po7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(8) {
+  background-image: url(../img/po8.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(9) {
+  background-image: url(../img/po9.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(10) {
+  background-image: url(../img/po10.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(11) {
+  background-image: url(../img/po11.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(12) {
+  background-image: url(../img/po12.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#Portfolio div ul li:nth-child(odd){ 
+  background-color: rgba(255,0,0,0.4);
+}
+
+section#Portfolio div ul li:nth-child(even){
+  background-color: rgba(0,0,255,0.4);  
+}
+
+section#Portfolio div ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
+}
+
+section#Portfolio div ul li a:hover{ 
+  background-color: rgba(0,0,0,0.5);
+}
+
+section#Portfolio div ul li a span{ 
+  border: 1px solid white;
+  padding: 10px;
+  display: block;
+  opacity: 0;
+  /*! display: none; */
+  transition: 0.5s;
+  color: white;
+  transform: translateY(10%);
+}
+
+section#Portfolio div ul li:hover a span{
+  opacity: 1; 
+  transform: translateY(0%);
+}
+
+section#Portfolio div ul li a span:hover{
+  background-color: white;
+  color: black;
+}
+section#Portfolio div > a{
+  /*! position: absolute; */
+  right: 0px;
+  top: 167px;
+}
+
+section#Portfolio div a:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+/* why */
+
+section#why{
+  background-color: green;
+  background-image: url(../img/woman.png),url(https://images.unsplash.com/photo-1635545195955-e65d68631341?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: 45%,cover;
+  background-position-x: right,center;
+  background-position-y: bottom,center;
+}
+
+section#why div{  
+  height: 500px;
+}
+
+section#why div h2{  
+  text-align: center;
+  font-weight: normal;
+}
+
+section#why div h2 span{
+  font-size: 52px;
+  /*! font-weight: bold; */  
+}
+
+section#why div ul{
+}
+
+section#why div ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+section#why div ul li h3{
+  font-weight: bold;
+}
+
+section#why div ul li h3::before{
+  content: "";
+  width: 110px;
+  height: 94px;
+  display: block;
+  background-image: url(../img/svg/display-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+section#why div p{
+  text-align: center;
+}
+
+aside ul li a{
+  color: #fff;
+  font-size: 13px;
+  display: block;
+  height: 100%;
+  background-image: url(../img/image-solid.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
